@@ -7,11 +7,6 @@ The official designer software of <code>tkintertools</code>
 </p>
 
 <p align="center">
-<a href="https://github.com/Xiaokang2022/tkintertools-designer/releases"><img alt="Version" src="https://img.shields.io/github/v/release/Xiaokang2022/tkintertools-designer?include_prereleases&logo=github&label=Version" title="Latest Version" /></a>
-<a href="https://pypistats.org/packages/tkintertools-designer"><img alt="Downloads" src="https://img.shields.io/pypi/dm/tkintertools-designer?label=Downloads&logo=pypi&logoColor=skyblue" title="Downloads" /></a>
-<a href="https://pepy.tech/project/tkintertools-designer"><img alt="Total Downloads" src="https://img.shields.io/pepy/dt/tkintertools-designer?logo=pypi&logoColor=gold&label=Total%20Downloads" title="Total Downloads" /></a>
-<a href="https://github.com/Xiaokang2022/tkintertools-designer"><img alt="Size" src="https://img.shields.io/github/languages/code-size/Xiaokang2022/tkintertools-designer?label=Size&logo=github" title="Code Size"/></a>
-<br/>
 <a href="https://github.com/Xiaokang2022/tkintertools-designer/watchers"><img alt="Watchers" src="https://img.shields.io/github/watchers/Xiaokang2022/tkintertools-designer?label=Watchers&logo=github&style=flat" title="Watchers" /></a>
 <a href="https://github.com/Xiaokang2022/tkintertools-designer/forks"><img alt="Forks" src="https://img.shields.io/github/forks/Xiaokang2022/tkintertools-designer?label=Forks&logo=github&style=flat" title="Forks" /></a>
 <a href="https://github.com/Xiaokang2022/tkintertools-designer/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Xiaokang2022/tkintertools-designer?label=Stars&color=gold&logo=github&style=flat" title="Stars" /></a>
@@ -33,3 +28,8 @@ The official designer software of <code>tkintertools</code>
         </picture>
     </a>
 </p>
+
+## Preview / 预览
+
+![light](dark.png)
+![dark](light.png)
