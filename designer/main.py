@@ -3,6 +3,7 @@
 import tkinter
 
 import tkintertools as tkt
+import tkintertools.core.configs as configs
 import tkintertools.core.constants as constants
 import tkintertools.core.virtual as virtual
 import tkintertools.standard.widgets as widgets
@@ -81,20 +82,20 @@ def gen_drag_feature(widget: virtual.Widget) -> virtual.Feature:
             self.y: int | None = None
             super().__init__(*args, **kwargs)
 
-        def _click_left(self, event: tkinter.Event) -> bool:
+        def _button_1(self, event: tkinter.Event) -> bool:
             if self.widget.detect(event.x, event.y):
                 self.x, self.y = event.x, event.y
-            return super()._click_left(event)
+            return getattr(super(), "_button_1", configs.Env.default_callback)(event)
 
-        def _move_left(self, event: tkinter.Event) -> bool:
+        def _b_1_motion(self, event: tkinter.Event) -> bool:
             if self.x is not None:
                 self.widget.move(event.x - self.x, event.y - self.y)
                 self.x, self.y = event.x, event.y
-            return super()._move_left(event)
+            return getattr(super(), "_b_1_motion", configs.Env.default_callback)(event)
 
-        def _release_left(self, event: tkinter.Event) -> bool:
+        def _button_release_1(self, event: tkinter.Event) -> bool:
             self.x = self.y = None
-            return super()._release_left(event)
+            return getattr(super(), "_button_release_1", configs.Env.default_callback)(event)
 
     return DragFeature
 
@@ -120,7 +121,8 @@ class App(tkt.Tk):
         self.tree_area = tkt.Frame(self.main_area, width=360, name=tkt.Canvas)
         self.tree_area.pack(side="left", fill="y")
 
-        self.work_area = tkt.Frame(self.main_area, name="", bg="black", highlightthickness=0)
+        self.work_area = tkt.Frame(
+            self.main_area, name="", bg="black", highlightthickness=0)
         self.work_area.pack(side="right", fill="both", expand=True)
 
         self.window = tkt.Frame(
